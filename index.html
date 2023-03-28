@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Validation</title>
+    
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+    <script type="text/javascript">
+     function validation() 
+     {
+        var x=document.forms["f1"]["username"].value;
+        if(x==""||x==null) {
+          alert("please enter valid data");
+          return false;
+        }
+        var y=document.forms["f1"]["email"].value;
+        if(y==" "||y==null) {
+          alert("please enter valid data");
+          return false;
+        }
+        var z=document.forms["f1"]["mobile"].value;
+        if(z==" "||z==null) {
+          alert("please enter valid data");
+          return false;
+        }
+        var l=document.forms["f1"]["age"].value;
+        if(l==" "||l==null) {
+          alert("please enter valid data");
+          return false;
+        }
+     }
+    </script>    
+        
+    <div class="container"> 
+        <div class="row col-md-6 col-md-offset-3">
+            <form id="f1"  onclick="return validation()">
+                <div class="panel-heading text-center">
+                  <h1>Registration Form</h1>
+                </div>
+                <div class="form-group">
+                    <label for="username">Your Name:</label>
+                    <input type="text" name="username" id="username"  placeholder="Enter Your Name" required>
+                    <span id="username"></span><br>
+                    <div class="error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email"  name="email"  id="email"  placeholder="Enter email" required>
+                    <span id="username"></span><br>
+                     <div class="error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Enter your phone number:</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+                    <span id="username"></span><br>
+                    <div class="error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="age" name="age" id="age" placeholder="Enter your age" maxlength=3 required>
+                    <span id="username"></span><br>
+                    <div class="error"></div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="signup" name="submit" ><br>
+                    <input type="reset" value="reset" name="reset">
+                    <div class="error"></div>
+                 
+                </div>
+          </form> 
+        </div>
+    </div>
+</body>         
+            
+                
+                
+  
